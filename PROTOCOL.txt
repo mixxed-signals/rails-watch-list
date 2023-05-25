@@ -1,0 +1,19 @@
+1. SCHEMA
+
+- MOVIES: id, title, overview, poster_irl, rating
+
+- LISTS: id, name
+
+- BOOKMARKS: id, comment, movie_id, list_id
+
+--> N:N relationship: bookmarks is join table
+
+- a movie belongs to many lists
+- a list has many movies
+- foreign keys: movie_id and list_id
+
+2. MODELS
+
+- Create models with rails g model
+- Add Validations
+- Add Associations
