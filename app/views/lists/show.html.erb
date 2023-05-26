@@ -1,4 +1,4 @@
-<h1>My List</h1>
+
 <%= @list.name %>
 
 <p> movies: </p>
@@ -10,10 +10,12 @@
         <div class="movie-card">
           <div class="movie-image">
             <%= image_tag movie.poster_url, class: "img-fluid" %>
-          </div>
-          <h2><%= movie.title %></h2>
-          <p><%= movie.overview %></p>
-          <p><strong>Rating:</strong> <%= movie.rating %></p>
+            <br>
+          </div class="text-center">
+          <br>
+          <h2 class="text-center"><%= movie.title %></h2>
+          <p class="text-center"><%= movie.overview %></p>
+          <p class="text-center"><strong>Rating:</strong> <%= movie.rating %></p>
         </div>
       </div>
     <% end %>
@@ -22,4 +24,7 @@
 
 <div>
   <%= link_to "Back to lists", lists_path %>
+  <%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure you want to delete this list?" } %>
+
+
 </div>

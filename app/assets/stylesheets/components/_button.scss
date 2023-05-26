@@ -1,0 +1,20 @@
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: transparent; /* Adjust the background color as desired */
+  color: #fff; /* Adjust the text color as desired */
+  border-radius: 5px;
+  border: 1px solid gray;
+  text-decoration: none;
+  font-size: 16px; /* Adjust the font size as desired */
+  font-weight: bold;
+
+  &:hover {
+    background-color: #0c0c0c; /* Adjust the background color on hover */
+  }
+
+}
+

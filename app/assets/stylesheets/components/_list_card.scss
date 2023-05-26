@@ -1,16 +1,15 @@
 
-.movie-card {
+.list-card {
   margin-top: 20px;
   margin-left: 20px;
   position: relative;
-  color: white;
   width: 400px;
   height: auto;
   border-radius: 100px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden; /* Ensure images fit within the movie card */
 
-  .movie-image {
+  .list-image {
     width: 100%;
     height: auto;
     display: flex;
@@ -23,7 +22,7 @@
     }
   }
 
-  .movie-name {
+  .list-name {
     position: absolute;
     top: 50%;
     left: 50%;
