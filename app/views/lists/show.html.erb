@@ -1,0 +1,25 @@
+<h1>My List</h1>
+<%= @list.name %>
+
+<p> movies: </p>
+
+<div class="movies-container">
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-md-4">
+        <div class="movie-card">
+          <div class="movie-image">
+            <%= image_tag movie.poster_url, class: "img-fluid" %>
+          </div>
+          <h2><%= movie.title %></h2>
+          <p><%= movie.overview %></p>
+          <p><strong>Rating:</strong> <%= movie.rating %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div>
+  <%= link_to "Back to lists", lists_path %>
+</div>

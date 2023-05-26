@@ -12,8 +12,28 @@
 - a list has many movies
 - foreign keys: movie_id and list_id
 
+
 2. MODELS
 
-- Create models with rails g model
-- Add Validations
-- Add Associations
+- Create models with rails g model (bookmarks must ref both movie:references list:references)
+- Add Validations (presence, uniqueness)
+- Add Associations (has_many/ belongs_to/ has_many through)
+
+
+3. LIST
+
+- Add routes: see all(index), see one(show), create new (new+create)
+- Generate controller
+- Add views
+
+!! generate model SINGULAR / generate controller PLURAL
+
+4. BOOKMARK
+
+- Add routes: NESTED! new + create (/list/:id), delete
+- Generate controller (use :list_id) and connect keys (@bookmark.list = @list)
+- Add views
+
+5. MOVIE
+
+- No controller -> in list#show we display and add movies
