@@ -1,11 +1,18 @@
-<h1> Lists </h1>
+<h1>Lists</h1>
 
-<div>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="lists-container">
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="col-md-4">
+        <div class="list-card">
+          <%= link_to list_path(list) do %>
+            <%= image_tag "e78cb811bc9c4b95f7ca7031de17b0df.jpg", class: "list-image" %>
+            <h2><%= list.name %></h2>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <%= link_to "Add List", new_list_path %>
